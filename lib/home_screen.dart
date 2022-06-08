@@ -1,10 +1,12 @@
-import 'dart:ui';
+
 import 'package:biography_of_bangabondhu/bongobondhuBooks.dart';
-import 'package:biography_of_bangabondhu/durlobsobchobi.dart';
+import 'package:biography_of_bangabondhu/chobisomuho.dart';
+
 import 'package:biography_of_bangabondhu/jiboni.dart';
 import 'package:biography_of_bangabondhu/uddriti.dart';
 import 'package:flutter/material.dart';
 import 'Apnar_Shongroho_Share.dart';
+import 'durlobChobi.dart';
 import 'ekNojoreBongobondhu.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -405,7 +407,7 @@ class MyApps extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => DurlobChobi(),
+                      builder: (context) => chobiSomuho(),
                     ),
                   ),
                 },

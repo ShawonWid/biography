@@ -2,7 +2,9 @@ import 'dart:ui';
 import 'package:flutter/material.dart';
 import 'Apnar_Shongroho_Share.dart';
 import 'bongobondhuBooks.dart';
-import 'durlobsobchobi.dart';
+import 'chobisomuho.dart';
+import 'durlobChobi.dart';
+
 import 'ekNojoreBongobondhu.dart';
 import 'ekattor.dart';
 import 'home_screen.dart';
@@ -597,10 +599,10 @@ class _uddritiState extends State<uddriti> {
                       Container(
                         child: CircleAvatar(
                           //border
-                          radius: 35,
+                          radius: 40,
                           backgroundColor: Colors.brown,
                           child: CircleAvatar(
-                            radius: 33,
+                            radius: 38,
                             backgroundImage: AssetImage('assets/icon.jpg'),
                           ),
                         ), //
@@ -627,7 +629,7 @@ class _uddritiState extends State<uddriti> {
                                 child: RichText(
                                   textAlign: TextAlign.center,
                                   text: TextSpan(
-                                    text: "From ",
+                                    text: "from: ",
                                     style: TextStyle(
                                       height: 1.171875,
                                       fontSize: 15,
@@ -660,7 +662,7 @@ class _uddritiState extends State<uddriti> {
               ),
               ListTile(
                 leading: Icon(Icons.remove_red_eye_rounded),
-                title: Text('এক নজরে বঙ্গবন্ধ'), //
+                title: Text('এক নজরে বঙ্গবন্ধ'),
                 onTap: () => {
                   Navigator.push(
                     context,
@@ -713,7 +715,7 @@ class _uddritiState extends State<uddriti> {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => DurlobChobi(),
+                      builder: (context) => chobiSomuho(),
                     ),
                   ),
                 },

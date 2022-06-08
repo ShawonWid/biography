@@ -1,6 +1,7 @@
 import 'package:biography_of_bangabondhu/splash_screen.dart';
 import 'package:flutter/material.dart';
 
+
 // class MyApp extends StatelessWidget {
 //   @override
 //   Widget build(BuildContext context) {
@@ -78,7 +79,9 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),
+
+      // Home er Jaygay Splash Screen Use korte hobe apatoto testing er jonno jsonparsing deya hoise...
+      // home: SplashScreen(),
     );
   }
 }
-

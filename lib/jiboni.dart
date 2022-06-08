@@ -5,7 +5,9 @@ import 'package:responsive_sizer/responsive_sizer.dart';
 
 import 'Apnar_Shongroho_Share.dart';
 import 'bongobondhuBooks.dart';
-import 'durlobsobchobi.dart';
+import 'chobisomuho.dart';
+import 'durlobChobi.dart';
+
 import 'ekNojoreBongobondhu.dart';
 import 'home_screen.dart';
 // void main() => runApp(const jiboni());
@@ -243,10 +245,10 @@ class jiboni extends StatelessWidget {
                         Container(
                           child: CircleAvatar(
                             //border
-                            radius: 35,
+                            radius: 40,
                             backgroundColor: Colors.brown,
                             child: CircleAvatar(
-                              radius: 33,
+                              radius: 38,
                               backgroundImage: AssetImage('assets/icon.jpg'),
                             ),
                           ), //
@@ -254,19 +256,18 @@ class jiboni extends StatelessWidget {
                         Padding(
                           padding: const EdgeInsets.only(top: 5),
                           child: Container(
-                            child: Text("বঙ্গবন্ধু",
+                            child: Text(
+                              "বঙ্গবন্ধু",
                               style: TextStyle(
                                 fontSize: 20,
                                 fontWeight: FontWeight.w800,
                                 color: Colors.black,
-
                               ),
-
                             ),
                           ),
                         ),
                         Padding(
-                          padding: const EdgeInsets.only(top: 5,left: 50),
+                          padding: const EdgeInsets.only(top: 5, left: 50),
                           child: Container(
                             child: Row(
                               children: [
@@ -274,7 +275,7 @@ class jiboni extends StatelessWidget {
                                   child: RichText(
                                     textAlign: TextAlign.center,
                                     text: TextSpan(
-                                      text: "From ",
+                                      text: "from: ",
                                       style: TextStyle(
                                         height: 1.171875,
                                         fontSize: 15,
@@ -297,8 +298,6 @@ class jiboni extends StatelessWidget {
                                     ),
                                   ),
                                 ),
-
-
                               ],
                             ),
                           ),
@@ -309,7 +308,7 @@ class jiboni extends StatelessWidget {
                 ),
                 ListTile(
                   leading: Icon(Icons.remove_red_eye_rounded),
-                  title: Text('এক নজরে বঙ্গবন্ধ'), //
+                  title: Text('এক নজরে বঙ্গবন্ধ'),
                   onTap: () => {
                     Navigator.push(
                       context,
@@ -362,7 +361,7 @@ class jiboni extends StatelessWidget {
                     Navigator.push(
                       context,
                       MaterialPageRoute(
-                        builder: (context) => DurlobChobi(),
+                        builder: (context) => chobiSomuho(),
                       ),
                     ),
                   },
