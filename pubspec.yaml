@@ -41,6 +41,10 @@ dependencies:
       responsive_sizer: ^3.0.8
       shared_preferences: ^2.0.15
       http: ^0.13.4
+      youtube_player_flutter: ^8.0.0
+      video_player: ^2.4.4
+
+
       
 
 
@@ -69,6 +73,7 @@ flutter:
 
       # To add assets to your application, add an assets section, like this:
       assets:
+
             - assets/aboutbongobondhu.png
             - assets/addvideo.png
             - assets/black_1.png
@@ -204,6 +209,16 @@ flutter:
             - assets/black_6.png
             - assets/black_9.png
             - assets/arial-black.ttf
+            - assets/eknojor.png
+            - assets/gallery.png
+            - assets/quote.png
+            - assets/share_icon.png
+            - assets/procchod1.png
+            - assets/procchod2.png
+            - assets/procchod3.png
+            - assets/procchod4.png
+            - assets/procchod5.png
+
 
 
 

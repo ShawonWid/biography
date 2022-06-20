@@ -76,12 +76,18 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+
+
+
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       home: SplashScreen(),
+
+
 
       // Home er Jaygay Splash Screen Use korte hobe apatoto testing er jonno jsonparsing deya hoise...
       // home: SplashScreen(),
     );
   }
+
 }

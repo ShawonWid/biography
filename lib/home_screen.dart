@@ -1,4 +1,7 @@
 
+import 'package:biography_of_bangabondhu/Drawer.dart';
+import 'package:biography_of_bangabondhu/Videos.dart';
+import 'package:biography_of_bangabondhu/boisomuho.dart';
 import 'package:biography_of_bangabondhu/bongobondhuBooks.dart';
 import 'package:biography_of_bangabondhu/chobisomuho.dart';
 
@@ -7,15 +10,19 @@ import 'package:biography_of_bangabondhu/uddriti.dart';
 import 'package:flutter/material.dart';
 import 'Apnar_Shongroho_Share.dart';
 import 'durlobChobi.dart';
+import 'durlov_video_Somuho.dart';
 import 'ekNojoreBongobondhu.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
 class MyApps extends StatelessWidget {
-  //final KeyIsFirstLoaded = "Is_First_LOaded";
+  final KeyIsFirstLoaded = "Is_First_LOaded";
+
   const MyApps({Key? key}) : super(key: key);
+
 
   @override
   Widget build(BuildContext context) {
+
     Future.delayed(Duration.zero, () => showDialogIfFirstLoaded(context));
     return Scaffold(
       appBar: AppBar(
@@ -172,8 +179,8 @@ class MyApps extends StatelessWidget {
                           ),
                         ),
                         Text(
-                          """১৮ বছর বয়সে বেগম ফজিলাতুন্নেছার সাথে বিবাহ বন্ধনে আবদ্ধ হন। 
-তাঁর দুই কন্যা শেখ হাসিনা ও শেখ রেহানা 
+                          """১৮ বছর বয়সে বেগম ফজিলাতুন্নেছার সাথে বিবাহ বন্ধনে আবদ্ধ হন।
+তাঁর দুই কন্যা শেখ হাসিনা ও শেখ রেহানা
 এবং তিন পুত্র শেখ জামাল, শেখ কামাল ও শেখ রাসেল।""",
                           style: TextStyle(
                             fontSize: 18,
@@ -272,184 +279,12 @@ class MyApps extends StatelessWidget {
           ),
         ),
       ),
-      drawer: Container(
-        // width: 2 * (width / 3),
-        child: Drawer(
-          child: ListView(
-            padding: EdgeInsets.zero,
-            children: <Widget>[
-              DrawerHeader(
-                decoration: BoxDecoration(
-                  image: DecorationImage(
-                    image: AssetImage("assets/aboutbongobondhu.png"),
-                    fit: BoxFit.cover,
-                  ),
-                ),
-                child: Container(
-                  child: Column(
-                    children: [
-                      Container(
-                        child: CircleAvatar(
-                          //border
-                          radius: 40,
-                          backgroundColor: Colors.brown,
-                          child: CircleAvatar(
-                            radius: 38,
-                            backgroundImage: AssetImage('assets/icon.jpg'),
-                          ),
-                        ), //
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 5),
-                        child: Container(
-                          child: Text(
-                            "বঙ্গবন্ধু",
-                            style: TextStyle(
-                              fontSize: 20,
-                              fontWeight: FontWeight.w800,
-                              color: Colors.black,
-                            ),
-                          ),
-                        ),
-                      ),
-                      Padding(
-                        padding: const EdgeInsets.only(top: 5, left: 50),
-                        child: Container(
-                          child: Row(
-                            children: [
-                              Container(
-                                child: RichText(
-                                  textAlign: TextAlign.center,
-                                  text: TextSpan(
-                                    text: "from: ",
-                                    style: TextStyle(
-                                      height: 1.171875,
-                                      fontSize: 15,
-                                      fontFamily: 'Montserrat',
-                                      fontWeight: FontWeight.normal,
-                                      color: Color(0xFF000000),
-                                    ),
-                                    children: [
-                                      TextSpan(
-                                        text: "Women In Digital ",
-                                        style: TextStyle(
-                                          height: 1.171875,
-                                          fontSize: 15,
-                                          fontFamily: 'Montserrat',
-                                          fontWeight: FontWeight.bold,
-                                          color: Colors.red,
-                                        ),
-                                      ),
-                                    ],
-                                  ),
-                                ),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              ListTile(
-                leading: Icon(Icons.remove_red_eye_rounded),
-                title: Text('এক নজরে বঙ্গবন্ধ'),
-                onTap: () => {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => MyApps(),
-                    ),
-                  )
-                },
-              ),
-              ListTile(
-                leading: Icon(Icons.article_rounded),
-                title: Text('বঙ্গবন্ধুর ৭ই মার্চ এর ভাষণ'),
-                onTap: () => {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const ekNojoreBongobondhu(),
-                    ),
-                  )
-                },
-              ),
-              ListTile(
-                leading: Icon(Icons.format_quote_sharp),
-                title: Text('উদৃতি'),
-                onTap: () => {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => uddriti(),
-                    ),
-                  )
-                },
-              ),
-              ListTile(
-                leading: Icon(Icons.border_color),
-                title: Text('জীবনী'),
-                onTap: () => {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => jiboni(),
-                    ),
-                  )
-                },
-              ),
-              ListTile(
-                leading: Icon(Icons.photo_album),
-                title: Text('দুর্লভ সব ছবি'),
-                onTap: () => {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => chobiSomuho(),
-                    ),
-                  ),
-                },
-              ),
-              ListTile(
-                leading: Icon(Icons.video_collection),
-                title: Text('দুর্লব ভিডিও সমুহ'),
-                onTap: () => {Navigator.of(context).pop()},
-              ),
-              ListTile(
-                leading: Icon(Icons.book),
-                title: Text('বই সমূহ'),
-                onTap: () => {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => bookpdf(),
-                    ),
-                  ),
-                },
-              ),
-              ListTile(
-                leading: Icon(Icons.collections_bookmark_rounded),
-                title: Text('আপনার সংগ্রহ শেয়ার করুন'),
-                onTap: () => {
-                  Navigator.push(
-                    context,
-                    MaterialPageRoute(
-                      builder: (context) => const apnar_shongroho(),
-                    ),
-                  )
-                },
-              ),
-            ],
-          ),
-        ),
-      ),
+      drawer: myDrawer(),
+
     );
   }
-
   showDialogIfFirstLoaded(BuildContext context) async {
-    //SharedPreferences prefs = await SharedPreferences.getInstance();
+    SharedPreferences prefs = await SharedPreferences.getInstance();
     showDialog(
         context: context,
         builder: (BuildContext context) {
@@ -502,7 +337,7 @@ class MyApps extends StatelessWidget {
  তিনি একটি শীর্ষস্থানীয় ব্যক্তিত্ব হয়ে ওঠেন এবং ১৯৪৯ সালে পাকিস্তানের পূর্ব পাকিস্তান ভিত্তিক রাজনৈতিক দল হিসাবে প্রতিষ্ঠিত আওয়ামী লীগের নেতা হন ।
 মুজিব পূর্ব পাকিস্তানে জন্য এবং পরে বাংলাদেশের স্বাধীনতা আন্দোলন ও পিছনে কেন্দ্রীয় ব্যক্তিত্ব রাজনৈতিক স্বায়ত্তশাসন লাভ করার প্রচেষ্টা একজন গুরুত্বপূর্ণ ব্যক্তিত্ব হিসেবে জমা হয় বাংলাদেশের স্বাধীনতা যুদ্ধের ১৯৭১ সালের এভাবে তিনি গণ্য করা হয়
 Jatir Janak;
-বা;Jatir Pita; (জাতির জাণোক বা জাতির পিতা , উভয় অর্থ ;জাতির পিতা;)
+বা;Jatir Pita; (জাতির জনক বা জাতির পিতা , উভয় অর্থ ;জাতির পিতা;)
 তাঁর মেয়ে শেখ হাসিনা তিনি আওয়ামী লীগের বর্তমান নেতা এবং বাংলাদেশের প্রধানমন্ত্রীও।
 মুজিবের অনুপস্থিতির সময়,
 অনেক বাঙালি মুক্তি বাহিনীতে যোগ দিয়েছিল এবং ভারতীয় সশস্ত্র বাহিনী দ্বারা সহায়তা করে ,
@@ -556,7 +391,10 @@ Jatir Janak;
                           //   builder: (context) => const MyApps(),
                           // );
                           Navigator.of(context).pop();
-                          //prefs.setBool(KeyIsFirstLoaded, false);
+
+
+                          prefs.setBool(KeyIsFirstLoaded, false);
+
                         },
                       ),
                     ),
@@ -567,9 +405,14 @@ Jatir Janak;
             ),
           );
         });
-    // bool? isFirstloaded = prefs.getBool(KeyIsFirstLoaded);
-    // if (isFirstloaded == null) {
-    //   ;
-    // }
+    bool? isFirstloaded = prefs.getBool(KeyIsFirstLoaded);
+    if (isFirstloaded == null) {
+      ;
+    }
   }
+
+
 }
+
+
+

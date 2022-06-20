@@ -50,19 +50,23 @@ class bookpdf extends StatelessWidget {
             padding: const EdgeInsets.only(top: 111),
             child: Column(
               children: [
-                Container(
-                  child: GestureDetector(
-                    onTap: () => Navigator.push(
-                      context,
-                      MaterialPageRoute(
-                        builder: (context) => Book(),
+                Card(
+
+
+                  child: Container(
+                    child: GestureDetector(
+                      onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => Book(),
+                        ),
+                        // onTap: () {},
                       ),
-                      // onTap: () {},
-                    ),
-                    child: Text(
-                      "অসমাপ্ত আত্মজীবনী",
-                      style: TextStyle(
-                        fontSize: 23,
+                      child: Text(
+                        "অসমাপ্ত আত্মজীবনী",
+                        style: TextStyle(
+                          fontSize: 23,
+                        ),
                       ),
                     ),
                   ),
@@ -136,6 +140,7 @@ class bookpdf extends StatelessWidget {
                       style: TextStyle(
                         fontSize: 23,
                       ),
+
                     ),
                   ),
                 ),
