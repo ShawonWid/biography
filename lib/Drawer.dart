@@ -2,6 +2,7 @@
 import 'package:biography_of_bangabondhu/Apnar_Shongroho_Share.dart';
 import 'package:biography_of_bangabondhu/Videos.dart';
 import 'package:biography_of_bangabondhu/boisomuho.dart';
+import 'package:biography_of_bangabondhu/bookCollection.dart';
 import 'package:biography_of_bangabondhu/chobisomuho.dart';
 import 'package:biography_of_bangabondhu/ekNojoreBongobondhu.dart';
 import 'package:biography_of_bangabondhu/home_screen.dart';
@@ -232,7 +233,7 @@ class myDrawer extends StatelessWidget {
                   Navigator.push(
                     context,
                     MaterialPageRoute(
-                      builder: (context) => MyBooks(),
+                      builder: (context) => bookCollection(),
                     ),
                   ),
                 },
